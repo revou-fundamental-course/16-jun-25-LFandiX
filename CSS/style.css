@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+#welcome {
+  font-size: 2em;
+}
+.logo {
+  font-size: 1.5em;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+.banner {
+  padding: 2em;
+  
+  
+}
+
+
+.photo-placeholder {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  
+}
+
+.headquarter {
+  padding: 2em;
+  
+  border-top: 2px solid #ccc;
+  
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5em;
+}
+
+.locations {
+  display: flex;
+  
+  gap: 5em;
+  margin-top: 1em;
+
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: auto;
+}
+
+#message {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 300px;
+  margin-bottom: 1em;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+}
+
+form button {
+  width: 100%;
+  padding: 0.7em;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.output {
+  border: 1px solid #000;
+  padding: 1em;
+  width: 300px;
+}
+
+footer {
+  text-align: right;
+  padding: 1em;
+  border-top: 1px solid #ccc;
+  font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .locations {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form, .output {
+    width: 90%;
+  }
+}

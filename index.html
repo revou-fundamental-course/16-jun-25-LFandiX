@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Website</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-    
+  <header>
+    <div class="logo">😊</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">Our Profile</a>
+      <a href="#">Portofolio</a>
+      <a href="#message">Message Us</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1 id="welcome" class="font-bold">Hi there!, Welcome to Website</h1>
+
+    <p>Ini adalah website latihan pertama</p>
+    <div class="photo-frame">
+
+    <img src="CSS/Banner.jpg" class="w-full h-[500px] flex justify-center items-center mt-4" alt="Banner Image" />
+    </div>
+</section>
+
+  <section class="headquarter">
+    <h1 id="welcome">Our Headquarter</h1>
+    <div class="locations">
+      <div class="location"><div class="circle"></div><p>Jakarta</p></div>
+      <div class="location"><div class="circle"></div><p>Bandung</p></div>
+      <div class="location"><div class="circle"></div><p>Surabaya</p></div>
+    </div>
+  </section>
+
+  <section id="message">
+    <h1 id="welcome">Message Us</h3>
+    <form id="contactForm">
+      <label>Nama:<br><input type="text" id="name" required></label><br>
+      <label>Tanggal Lahir:<br><input type="date" id="dob" required></label><br>
+      <label>Jenis Kelamin:<br>
+        <input type="radio" name="gender" value="Laki - Laki" required> Laki-Laki
+        <input type="radio" name="gender" value="Perempuan" required> Perempuan
+      </label><br>
+      <label>Pesan:<br><textarea id="messageText" required></textarea></label><br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="output" id="outputBox"></div>
+  </section>
+
+  <footer>
+    <p>Created by Alfandi Wijaya</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
