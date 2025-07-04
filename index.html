@@ -12,8 +12,8 @@
     <div class="logo">😊</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="profile.html">Our Profile</a>
-      <a href="#">Portofolio</a>
+      <a href="component/profile.html">Our Profile</a>
+      <a href="#headquarter">Our Headquarters</a>
       <a href="#message">Message Us</a>
     </nav>
   </header>
@@ -28,7 +28,7 @@
     </div>
 </section>
 
-  <section class="headquarter">
+  <section id="headquarter" class="headquarter">
     <h1 id="welcome">Our Headquarter</h1>
     <div class="locations">
       <div class="location"><div class="circle"></div><p>Jakarta</p></div>
@@ -37,20 +37,22 @@
     </div>
   </section>
 
-  <section id="message" class="flex">
-    <h1 id="welcome">Message Us</h3>
-    <form id="contactForm">
-      <label>Nama:<br><input type="text" id="name" required></label><br>
-      <label>Tanggal Lahir:<br><input type="date" id="dob" required></label><br>
-      <label>Jenis Kelamin:<br>
-        <input type="radio" name="gender" value="Laki - Laki" required> Laki-Laki
-        <input type="radio" name="gender" value="Perempuan" required> Perempuan
-      </label><br>
-      <label>Pesan:<br><textarea id="messageText" required></textarea></label><br>
-      <button type="submit">Submit</button>
-    </form>
+  <section id="message" >
+    <h1 id="welcome">Message Us</h1>
+    <div class="flex justify-space-between ">
+      <form id="contactForm">
+        <label>Nama:<br><input type="text" id="name" required></label><br>
+        <label>Tanggal Lahir:<br><input type="date" id="dob" required></label><br>
+        <label>Jenis Kelamin:<br>
+          <input type="radio" name="gender" value="Laki - Laki" required> Laki-Laki
+          <input type="radio" name="gender" value="Perempuan" required> Perempuan
+        </label><br>
+        <label>Pesan:<br><textarea id="messageText" required></textarea></label><br>
+        <button type="submit">Submit</button>
+      </form>
 
-    <div class="output" id="outputBox"></div>
+      <div class="output" id="outputBox"></div>
+    </div>
   </section>
 
   <footer>
