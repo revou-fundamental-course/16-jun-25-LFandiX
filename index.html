@@ -37,23 +37,46 @@
     </div>
   </section>
 
-  <section id="message" >
-    <h1 id="welcome">Message Us</h1>
-    <div class="flex justify-space-between ">
-      <form id="contactForm">
-        <label>Nama:<br><input type="text" id="name" required></label><br>
-        <label>Tanggal Lahir:<br><input type="date" id="dob" required></label><br>
-        <label>Jenis Kelamin:<br>
-          <input type="radio" name="gender" value="Laki - Laki" required> Laki-Laki
-          <input type="radio" name="gender" value="Perempuan" required> Perempuan
-        </label><br>
-        <label>Pesan:<br><textarea id="messageText" required></textarea></label><br>
-        <button type="submit">Submit</button>
-      </form>
+ <section id="message" class="align-items-center">
+  <h1 id="welcome">Message Us</h1>
+  <div class="form-container">
+    <form id="contactForm">
+      <table>
+        <tr>
+          <td><label for="name">Nama</label></td>
+          <td>:</td>
+          <td><input type="text" id="name" placeholder="Nama" required></td>
+        </tr>
+        <tr>
+          <td><label for="dob">Tanggal Lahir</label></td>
+          <td>:</td>
+          <td><input type="date" id="dob" required></td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="gender" value="Laki - Laki" id="male" required checked>
+            <label for="male">Laki-Laki</label>
+            <input type="radio" name="gender" value="Perempuan" id="female">
+            <label for="female">Perempuan</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="messageText">Pesan</label></td>
+          <td>:</td>
+          <td><textarea id="messageText" placeholder="Pesan" required></textarea></td>
+        </tr>
+      </table>
+      <button type="submit">Submit</button>
+    </form>
 
-      <div class="output" id="outputBox"></div>
+    <div class="output" id="outputBox">
+      <!-- Output akan ditampilkan di sini -->
     </div>
-  </section>
+  </div>
+</section>
+
 
   <footer>
     <p>Created by Alfandi Wijaya</p>
@@ -61,4 +84,24 @@
 
   <script src="script.js"></script>
 </body>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const dob = document.getElementById('dob').value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const message = document.getElementById('messageText').value;
+    const currentTime = new Date().toString();
+
+    document.getElementById('outputBox').innerHTML = `
+      <p><b>Current time</b> : ${currentTime}</p>
+      <p><b>Nama</b> : ${name}</p>
+      <p><b>Tanggal Lahir</b> : ${dob}</p>
+      <p><b>Jenis Kelamin</b> : ${gender}</p>
+      <p><b>Pesan</b> : ${message}</p>
+    `;
+  });
+</script>
+
 </html>
